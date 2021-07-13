@@ -1,12 +1,17 @@
+## Group 7 INWK 6211 PROJECT ROHIT KUMAR GUNDU
+
 # Python program implementing Image Steganography
 
 # PIL module is used to extract
 # pixels of image and modify it
+# Python Imaging Library is a free and open-source additional library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats
 from PIL import Image
 
 
 # Convert encoding data into 8-bit binary
 # form using ASCII value of characters
+
+# Gent data returns the image in sequence of data from pixel values
 def genData(data):
     # list of binary codes
     # of given data
@@ -42,7 +47,7 @@ def modPix(pix, data):
                     pix[j] -= 1
                 else:
                     pix[j] += 1
-            # pix[j] -= 1
+                # pix[j] -= 1
 
         # Eighth pixel of every set tells
         # whether to stop ot read further.
@@ -81,7 +86,7 @@ def encode_enc(newimg, data):
 
 
 # Encode data into image
-def encode() -> object:
+def encode():
     img = input("Enter image name(with extension) : ")
     image = Image.open(img, 'r')
 
@@ -124,18 +129,19 @@ def decode():
 
 
 # Main Function
-def main() -> object:
-    a = int(input(":: Welcome to Steganography ::\n"
+def main():
+    a = int(input(":: ####### 6211 PROJECT GROUP 7 Image Steganography implementation below  #######::\n"
                   "1. Encode\n2. Decode\n"))
     if a == 1:
         encode()
 
     elif a == 2:
-        print("Decoded Word : " + decode())
+        print("Decoded Word :  " + decode())
     else:
         raise Exception("Enter correct input")
 
 
 # Driver Code
 if __name__ == '__main__':
+    # Calling main function
     main()

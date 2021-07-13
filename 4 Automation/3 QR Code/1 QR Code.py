@@ -11,8 +11,8 @@ qr = qrcode.QRCode(
 	border=1,
 )
 
-InsertEncryptedData = 'testing'
+InsertEncryptedData = 'Launch Missiles'
 qr.add_data(InsertEncryptedData)
 qr.make(fit=True)
 img = qr.make_image(fill='black', back_color='white')
-img.save('<test1>.png')
+img.save('<bucky>.png')

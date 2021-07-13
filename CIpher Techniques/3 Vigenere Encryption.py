@@ -14,5 +14,5 @@ def encryptWithVignere(plaintext, key):
     return ciphertext
 
 #########################################  PlainText   ####### Key    ###########
-print(f"Ciphertext : {encryptWithVignere('Attack at dawn', 'LEMON')}")
+print(f"Ciphertext : {encryptWithVignere('SEVERALUNEVENTFULLHOURS', 'inwkmath')}")
 #########################################  PlainText   ####### Key    ###########

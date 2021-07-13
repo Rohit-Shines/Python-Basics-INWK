@@ -1,4 +1,4 @@
-# Vigenere Cipher - Decryption
+#Vigenere Cipher - Decryption
 
 ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 def decryptWithVignere(ciphertext, key):
