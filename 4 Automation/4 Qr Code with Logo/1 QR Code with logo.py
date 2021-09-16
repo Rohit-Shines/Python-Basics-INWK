@@ -21,7 +21,7 @@ QRcode = qrcode.QRCode(
 )
 ############################
 # taking url or text
-url = 'https://www.dal.ca/'
+url = 'https://dalonline.dal.ca/PROD/twbkwbis.P_GenMenu?name=bmenu.P_MainMnu'
 
 # addingg URL or text to QRcode
 QRcode.add_data(url)
@@ -31,11 +31,11 @@ QRcode.make()
 
 # taking color name from user
 ####################################
-QRcolor = 'orange'
+QRcolor = 'black'
 
 # adding color to QR code
 QRimg = QRcode.make_image(
-	fill_color=QRcolor, back_color="white").convert('RGB')
+	fill_color=QRcolor, back_color="yellow").convert('RGB')
 
 # set size of QR code
 pos = ((QRimg.size[0] - logo.size[0]) // 2,
@@ -44,6 +44,6 @@ QRimg.paste(logo, pos)
 
 # save the QR code generated
 ####################################
-QRimg.save('Dal_QR_Code.png')
+QRimg.save('DalOnline black.png')
 
 print('QR code generated!')

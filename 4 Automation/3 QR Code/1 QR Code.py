@@ -8,11 +8,11 @@ import qrcode
 qr = qrcode.QRCode(
 	version=2,
 	box_size=15,
-	border=1,
+	border=5,
 )
 
-InsertEncryptedData = 'Launch Missiles'
+InsertEncryptedData = 'https://www.google.com'
 qr.add_data(InsertEncryptedData)
 qr.make(fit=True)
 img = qr.make_image(fill='black', back_color='white')
-img.save('<bucky>.png')
+img.save('<rohit test g>.png')

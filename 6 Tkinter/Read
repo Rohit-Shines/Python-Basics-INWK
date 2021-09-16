@@ -1,0 +1,13 @@
+https://www.geeksforgeeks.org/introduction-to-tkinter/
+
+ALL WIDGETS AVAILABLE
+https://www.geeksforgeeks.org/python-gui-tkinter/
+
+Some other Python Libraries available for creating our own GUI applications are
+Kivy
+Python Qt
+wxPython
+
+pack() method:It organizes the widgets in blocks before placing in the parent widget.
+grid() method:It organizes the widgets in grid (table-like structure) before placing in the parent widget.
+place() method:It organizes the widgets by placing them on specific positions directed by the programmer.
