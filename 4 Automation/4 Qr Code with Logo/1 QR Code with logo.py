@@ -5,7 +5,7 @@ from PIL import Image
 # taking image which user wants
 # in the QR code center
 ############################
-Logo_link = 'Dal1.png'
+Logo_link = 'Akhilboy.png'
 
 logo = Image.open(Logo_link)
 
@@ -21,7 +21,7 @@ QRcode = qrcode.QRCode(
 )
 ############################
 # taking url or text
-url = 'https://dalonline.dal.ca/PROD/twbkwbis.P_GenMenu?name=bmenu.P_MainMnu'
+url = 'https://www.instagram.com/akhil_ravula/?hl=en'
 
 # addingg URL or text to QRcode
 QRcode.add_data(url)
@@ -35,7 +35,7 @@ QRcolor = 'black'
 
 # adding color to QR code
 QRimg = QRcode.make_image(
-	fill_color=QRcolor, back_color="yellow").convert('RGB')
+	fill_color=QRcolor, back_color="white").convert('RGB')
 
 # set size of QR code
 pos = ((QRimg.size[0] - logo.size[0]) // 2,
@@ -44,6 +44,6 @@ QRimg.paste(logo, pos)
 
 # save the QR code generated
 ####################################
-QRimg.save('DalOnline black.png')
+QRimg.save('ak.png')
 
 print('QR code generated!')
