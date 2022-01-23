@@ -6,15 +6,6 @@
 from __future__ import print_function, division
 
 def sed(pattern, replace, source, dest):
-    """Reads a source file and writes the destination file.
-
-    In each line, replaces pattern with replace.
-
-    pattern: string
-    replace: string
-    source: string filename
-    dest: string filename
-    """
     fin = open(source, 'r')
     fout = open(dest, 'w')
 
@@ -29,7 +20,7 @@ def sed(pattern, replace, source, dest):
 def main():
     pattern = 'pattern'
     replace = 'replace'
-    source = 'apple.txt'
+    source = 'orange.txt'
     dest = source + '.replaced'
     sed(pattern, replace, source, dest)
 

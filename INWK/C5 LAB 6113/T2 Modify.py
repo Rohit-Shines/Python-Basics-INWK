@@ -7,26 +7,17 @@
 import string
 import time
 
-
 def del_punctuation(item):
-    """
-        This function deletes punctuation from a word.
-    """
     punctuation = string.punctuation
     for c in item:
         if c in punctuation:
             item = item.replace(c, '')
     return item
 
-
 def break_into_words():
-    '''
-        This function reads file, breaks it into
-        a list of used words in lower case.
-    '''
-    book = open('apple.txt')
+    textBook = open('apple.txt')
     words_list = []
-    for line in book:
+    for line in textBook:
         for item in line.split():
             item = del_punctuation(item)
             item = item.lower()
@@ -36,10 +27,6 @@ def break_into_words():
 
 
 def create_dict():
-    '''
-        This function calculates words frequency and
-        returns it as a dictionary.
-    '''
     words_list = break_into_words()
     dictionary = {}
     for word in words_list:
@@ -52,11 +39,7 @@ def create_dict():
 
 
 dictionary = create_dict()
-dictionary.pop('', None)  # accidentally 5 empty strings appeared in the dictionary. why?
-
-# print('The total number of words in the book is {}'.format(len(break_into_words())))
-# print('The number of different words used in the book {}'.format(len(dictionary)))
-
+dictionary.pop('', None)
 start_time = time.time()
 print('The total number of words in the book is {}'.format(len(break_into_words())))
 print('The number of different words used in the book {}'.format(len(dictionary)))

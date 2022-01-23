@@ -8,16 +8,16 @@
 
 from string import punctuation, whitespace
 
-book = 'apple.txt'
+orange = 'apple'
+Book1 = '%s.txt' % orange
 
-with open(book, 'r') as fd:
+with open(Book1, 'r') as fd:
     words = fd.read().split()
 
-
-# remove punctuation, whitespace, uppercase
-def clean(word):
+# removes punctuation white space and upper case letters
+def clean(Words):
     cleansed = ''
-    for char in word:
+    for char in Words:
         if (char in punctuation) or (char in whitespace):
             pass
         else:
@@ -26,4 +26,4 @@ def clean(word):
 
 
 print()
-"{} has {} 'words'".format(book, len([clean(word) for word in words]))
+"{} has {} 'words'".format(Book1, len([clean(word) for word in words]))
