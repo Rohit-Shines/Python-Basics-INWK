@@ -9,7 +9,7 @@ def make_wordlist(file):
         result += [word]
     return result
 
-wordlist = make_wordlist("apple.txt")
+wordlist = make_wordlist("lab0.txt")
 
 
 def in_bisect(word_list, word):

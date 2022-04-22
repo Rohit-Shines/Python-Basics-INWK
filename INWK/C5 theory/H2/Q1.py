@@ -17,3 +17,39 @@
 # pyplot.ylabel(“label, string”)
 # pyplot.plot(x-value, y-value)
 # pyplot.show()
+from operator import itemgetter  # importing operator
+import pandas as pd  # importing pandas
+from matplotlib import pyplot as plt  # to create the graph
+
+frequency = {}  # creating a blank dictionary
+file = open("Mango.txt", "r")  # opening the text file in read mode
+words_doc = file.read()  # assigning contents of the file
+splitted_words_doc = words_doc.split()
+
+# calculate frequncy
+for word in splitted_words_doc:
+    count = frequency.get(word, 0)
+    frequency[word] = count + 1
+
+rank = 1
+column_header = ['Rank', 'Frequency', 'Frequency * Rank']
+df = pd.DataFrame(columns=column_header)
+collection = sorted(frequency.items(), key=itemgetter(1), reverse=True)
+
+# To create a table of frequency * rank
+
+for word, freq in collection:
+    df.loc[word] = [rank, freq, rank * freq]
+    rank = rank + 1
+
+print(df)
+
+# graphical representation of Frequency vs Words
+plt.figure(figsize=(10, 10))
+plt.ylabel("Frequency")
+plt.xlabel("Words")
+plt.xticks(rotation=90)
+
+for word, freq in collection[:30]:
+    plt.bar(word, freq)
+plt.show()

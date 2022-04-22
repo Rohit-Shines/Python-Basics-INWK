@@ -15,7 +15,7 @@ def del_punctuation(item):
     return item
 
 def break_into_words():
-    textBook = open('apple.txt')
+    textBook = open('lab0.txt')
     words_list = []
     for line in textBook:
         for item in line.split():

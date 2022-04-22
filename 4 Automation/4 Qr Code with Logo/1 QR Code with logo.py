@@ -5,7 +5,7 @@ from PIL import Image
 # taking image which user wants
 # in the QR code center
 ############################
-Logo_link = 'Akhilboy.png'
+Logo_link = 'banda.png'
 
 logo = Image.open(Logo_link)
 
@@ -21,7 +21,7 @@ QRcode = qrcode.QRCode(
 )
 ############################
 # taking url or text
-url = 'https://www.instagram.com/akhil_ravula/?hl=en'
+url = 'https://www.instagram.com/sai_bandari93/'
 
 # addingg URL or text to QRcode
 QRcode.add_data(url)
@@ -44,6 +44,6 @@ QRimg.paste(logo, pos)
 
 # save the QR code generated
 ####################################
-QRimg.save('ak.png')
+QRimg.save('bandaQR.png')
 
 print('QR code generated!')

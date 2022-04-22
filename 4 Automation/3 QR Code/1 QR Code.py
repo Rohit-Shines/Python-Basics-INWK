@@ -11,8 +11,8 @@ qr = qrcode.QRCode(
 	border=5,
 )
 
-InsertEncryptedData = 'https://www.google.com'
+InsertEncryptedData = 'https://www.instagram.com/sai_bandari93/'
 qr.add_data(InsertEncryptedData)
 qr.make(fit=True)
 img = qr.make_image(fill='black', back_color='white')
-img.save('<rohit test g>.png')
+img.save('<saiBandari>.png')
