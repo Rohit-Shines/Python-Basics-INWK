@@ -21,7 +21,7 @@ QRcode = qrcode.QRCode(
 )
 ############################
 # taking url or text
-url = 'https://www.instagram.com/sai_bandari93/'
+url = 'https://www.instagram.com/pravallika008/'
 
 # addingg URL or text to QRcode
 QRcode.add_data(url)

@@ -11,7 +11,7 @@ qr = qrcode.QRCode(
 	border=5,
 )
 
-InsertEncryptedData = 'https://www.instagram.com/sai_bandari93/'
+InsertEncryptedData = 'https://www.instagram.com/pravallika008/'
 qr.add_data(InsertEncryptedData)
 qr.make(fit=True)
 img = qr.make_image(fill='black', back_color='white')
